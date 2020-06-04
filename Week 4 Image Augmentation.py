@@ -28,7 +28,7 @@ tf.keras.layers.Dense(1, activation='sigmoid')
 model.compile(loss='binary_crossentropy',
                 optimizer=RMSprop(lr=0.001), #lr= learning rate
                 metrics=['accuracy'] )
-history=model.fit_generator(
+history = model.fit_generator(
     train_generator,
     steps_per_epoch=8, #1024 images/batches of 128 = 8
     epochs=15, 
