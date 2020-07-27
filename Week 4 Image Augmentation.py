@@ -29,7 +29,7 @@ model.compile(loss='binary_crossentropy',
                 optimizer=RMSprop(lr=0.001), #lr= learning rate
                 metrics=['accuracy'] )
 history = model.fit_generator(
-    train_generator,
+    train_generator, 
     steps_per_epoch=8, #1024 images/batches of 128 = 8
     epochs=15, 
     validation_data= validation_generator, 
